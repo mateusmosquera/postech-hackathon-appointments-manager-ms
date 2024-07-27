@@ -19,7 +19,7 @@ class AppointmentsHttpController(private val appointmentsService: AppointmentsAp
     fun create(@Valid @RequestBody appointments: AppointmentsRequest,
                uriBuilder: UriComponentsBuilder): ResponseEntity<AppointmentsResponse> {
         val appointmentsCreated = appointmentsService.create(appointments)
-        val uri = uriBuilder.path("/api/v1/appointments/{id}").buildAndExpand(appointments.id).toUri()
+        val uri = uriBuilder.path("/api/v1/appointments/{id}").buildAndExpand(appointmentsCreated.id).toUri()
         return ResponseEntity.created(uri).body(appointmentsCreated)
     }
 

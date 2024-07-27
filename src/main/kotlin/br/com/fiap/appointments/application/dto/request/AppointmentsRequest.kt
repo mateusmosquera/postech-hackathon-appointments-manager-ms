@@ -1,11 +1,11 @@
 package br.com.fiap.appointments.application.dto.request
 
-import jakarta.validation.constraints.NotBlank
+import jakarta.validation.constraints.NotNull
 import java.time.LocalDateTime
 
-data class AppointmentsRequest(@field:NotBlank val id: Long,
-                      @field:NotBlank val medId: Long,
-                      @field:NotBlank val patientId: Long,
-                      @field:NotBlank val startTime: LocalDateTime,
-                      @field:NotBlank val endTime: LocalDateTime
+data class AppointmentsRequest(
+                      @field:NotNull val medId: Long,
+                      @field:NotNull val patientId: Long,
+                      @field:NotNull val startTime: LocalDateTime,
+                      @field:NotNull val endTime: LocalDateTime
                       )

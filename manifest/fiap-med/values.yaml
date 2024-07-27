@@ -109,3 +109,7 @@ healthCheck:
 env:
   - name: DATABASE_URL
     value: "jdbc:postgresql://appointments-db.cvwsi6meo8q2.us-east-1.rds.amazonaws.com:5432/appointments"
+  - name: MED_SERVICE
+    value: "https://bbhxgvxc8j.execute-api.us-east-1.amazonaws.com/med-manager/api/v1"
+  - name: PATIENT_SERVICE
+    value: "https://bbhxgvxc8j.execute-api.us-east-1.amazonaws.com//patient-manager/api/v1"
